@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #141414;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+        }
+
+        .nav {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .nav li {
+            margin: 0 15px;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .search input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .banner {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 50px 20px;
+            background: url('C:\Users\User 13\Downloads\backrounimage.jpg') center/cover;
+        }
+
+        img {
+            width: 500px;
+            height: 500px; 
+        }
+
+        img {
+            border: 2px solid #ccc;
+        }
+        img {
+            border-radius: 10px; /* set to your desired border radius */
+        }
+        img {
+            box-shadow: 2px 2px 5px #888888; /* set to your desired shadow values and color */
+        }
+        img {
+            margin: 10px; /* set to your desired margin */
+            padding: 5px; /* set to your desired padding */
+        }
+        
+                
+        
+
+        .banner h4 {
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .banner p {
+            font-size: 1em;
+            margin-top: 15px;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button a {
+            display: inline-block;
+            background-color: #e50914;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+        }
+
+        .carousel-box {
+            background-color: #141414;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            justify-content: center;
+        }
+
+        .carousel-item {
+            flex: 0 0 100px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .play {
+            background-color: #e50914;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .sci {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .sci li {
+            margin: 0 15px;
+        }
+
+        .trailer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .trailer video {
+            width: 80%;
+            max-height: 80%;
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin-top: 50px;
+        }
+
+        .slides-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            box-sizing: border-box;
+        }
+
+        .slide img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .slide-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        #slide-arrow-prev {
+            left: 20px;
+        }
+
+        #slide-arrow-next {
+            right: 20px;
+        }
+    </style>
+    <title>Mvc Movie Web</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Movies</a>
+        <ul class="nav">
+            <li><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+            <li><a href="#">Adults</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Trend</a></li>
+            <li><a href="#">List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="content active">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <img src="C:\Users\User 13\Downloads\backrounimage.jpg" alt="background picture" class="movie-title" />
+        .movie-title {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Ensures the image is treated as a block element */
+            margin: 0 auto; /* Centers the image on the page */
+            max-height: 200px; /* Set a maximum height for the image */
+        }
+    
+        /* Additional styles for responsiveness */
+        @media (max-width: 768px) {
+            .movie-title {
+                max-height: 150px; /* Adjust for smaller screens */
+            }
+        }
+        <h4>
+            <span>2024</span><span><i>12+</i></span><span>1h 32min</span><span>Romance</span>
+        </h4>
+        <p>
+            This drama, based on Alan Bowne's play "Beirut," takes place in a decrepit New York City of the near future, controlled by a fascist government.
+        </p>
+        <div class="button">
+            <a href="#"><i

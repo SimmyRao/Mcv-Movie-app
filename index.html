@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Mvc Movie Web</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Movies</a>
+        <ul class="nav">
+            <li>
+                <a href="#"><i class="fa fa-home" aria-hidden="true"></i></a>
+            </li>
+            <li><a href="#">Adults</a></li>
+            <li><a href="#">Kids</a></li>
+            <li><a href="#">Trend</a></li>
+            <li><a href="#">List</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="search">
+            <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+    </header>
+    <div class="banner">
+        <div class="content active">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <div class="content">-</div>
+        <img src="C:\Mvc Movie\images\backrounimage.jpg" alt="background picture" class="movie-title" />
+        <h4>
+            <span>2024</span><span><i>12+</i></span><span>1h 32min</span><span>Romance</span>
+        </h4>
+        <p>
+            This drama, based on Alan Bowne's play "Beirut," takes place in a decrepit New York City of the near future, controlled by a fascist government.
+        </p>
+        <div class="button">
+            <a href="#"><i class="fa-sharp fa-solid fa-circle-play"></i> Watch</a>
+            <a href="#"><i class="fa-regular fa-square-plus"></i> List</a>
+        </div>
+    </div>
+    <div class="carousel-box">
+        <div class="carousel">
+            <div class="carousel-item" onclick="changeBg('bg-backrounimage.jpg', 'the-backrounimage')"></div>
+            <div class="carousel-item">
+                <img src="C:\Users\User 13\Pictures\mb_229_229395.jpg" alt="mb 229">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Mvc Movie\images\extraction-movie-poster.jpg" alt="extractionposter">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Mvc Movie\images\OIP (2).jpg" alt="iop2">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Mvc Movie\images\My-Perfect-Romance.webp" alt="my p romance">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Mvc Movie\images\mb_229_229395.jpg" alt="229">
+            </div>
+            <div class="carousel-item">
+                <img src="C:\Mvc Movie\images\OIP (1).jpg" alt="oip1">
+            </div>
+        </div>
+        <a href="#" class="play" onclick="toggleVideo();"><i class="fa-solid fa-play"></i> Watch trailer</a>
+        <ul class="sci">
+            <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="trailer">
+        <video src="C:\Mvc Movie\video\Absolute Deception Official DVD Release Trailer #1 (2013) - Cuba Gooding Jr. Movie HD.mp4" muted controls="true" autoplay="true"></video>
+        <img class="close" src="image/close.pgn" alt="" onclick="toggleVideo();">
+    </div>
+    <script src="java.script.js"></script>
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">&#8249;</button>
+        <button class="slide-arrow" id="slide-arrow-next">&#8250;</button>
+        <ul class="slides-container" id="slides-container">
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+        </ul>
+    </section>
+</body>
+</html>
